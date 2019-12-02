@@ -1,11 +1,12 @@
 # GF_MDS
 
 This code applies the gapfilling Marginal Distribution Sampling method described in Reichstein et al. 2005 (Global Change Biology).
+The code has been validated against the original implementation.
 This version allows larger flexibility in the selection of the drivers.
 
 Differences respect to the original method are the possibilities to:
 1) define the variable to fill and the drivers to use
-2) change the tolerance of the different drivers (see the paper for details)
+2) change the tolerance of the different drivers and which is the main driver (see the paper for details)
 3) process a multi-years dataset
 4) process hourly timeseries
 
