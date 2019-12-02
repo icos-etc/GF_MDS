@@ -91,12 +91,12 @@ static const char msg_ok[] = "ok";
 static const char msg_ok_with_gaps_unfilled[] = "ok with %d gaps unfilled.\n";
 static const char msg_summary[] = "\n%d file%s found: %d processed, %d skipped.\n\n";
 static const char msg_usage[] =	"This code applies the gapfilling Marginal Distribution Sampling method\n"
-								"described in Reichstein et al. 2005 (Global Change Biology).\nThis version "
+								"described in Reichstein et al. 2005 (Global Change Biology).\n The code has been validated against the original implementation.\nThis version "
 								"allows larger flexibility in the selection of the drivers.\n"
 								"\n"
 								"Differences respect to the original method are the possibilities to:\n"
 								"1) define the variable to fill and the drivers to use\n"
-								"2) change the tolerance of the different drivers (see the paper for details)\n"
+								"2) change the tolerance of the different drivers and which is the main driver (see the paper for details)\n"
 								"3) process a multi-years dataset\n"
 								"4) process hourly timeseries\n"
 								"\n"
