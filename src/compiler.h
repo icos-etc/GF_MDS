@@ -1,0 +1,55 @@
+/*
+	compiler.h
+
+	this file is part of gf_mds
+
+	author: Alessio Ribeca <a.ribeca@unitus.it>
+	owner: DIBAF - University of Tuscia, Viterbo, Italy
+
+	scientific contact: Dario Papale <darpap@unitus.it>
+*/
+
+/*
+Copyright 2014-2019 DIBAF - University of Tuscia, Viterbo, Italy
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#ifndef COMPILER_H
+#define COMPILER_H
+
+/* */
+#if defined (__GNUC__)
+	#define COMPILER "GNU C "__VERSION__
+#elif defined (__LCC__)
+	#define COMPILER "LCC"
+#elif defined (__POCC__)
+	#define COMPILER "PellesC"
+#elif defined (_MSC_VER )
+	#if _MSC_VER == 1200
+		#define COMPILER "Ms VC++ 6.0"
+	#elif _MSC_VER == 1300
+		#define COMPILER "Ms VC++ 7.0"
+	#elif _MSC_VER == 1310
+		#define COMPILER "Ms VC++ 7.1"
+	#elif _MSC_VER == 1400
+		#define COMPILER "Ms VC++ 8.0"
+	#elif _MSC_VER == 1500
+		#define COMPILER "Ms VC++ 9.0"
+	#else
+		#define COMPILER "Ms VC++ Compiler"
+	#endif
+#else
+	#define COMPILER "unknown"
+#endif
+
+/* */
+#endif /* COMPILER_H */ 
